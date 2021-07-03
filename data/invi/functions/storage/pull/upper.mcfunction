@@ -1,0 +1,1 @@
+data modify entity @s data.Storage.Upper set from block 0 1 0 Items

@@ -1,0 +1,1 @@
+data modify entity @s data.Storage.Ender set from block 0 1 0 Items

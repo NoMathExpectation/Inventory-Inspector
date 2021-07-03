@@ -1,0 +1,14 @@
+{
+    "criteria": 
+    {
+        "invi:player_update":
+        {
+            "trigger": "minecraft:inventory_changed"
+        }
+    },
+    "requirements": [["invi:player_update"]],
+    "rewards": 
+    {
+        "function": "invi:transfer/player"
+    }
+}

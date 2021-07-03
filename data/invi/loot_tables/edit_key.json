@@ -1,0 +1,27 @@
+{
+    "type": "minecraft:command",
+    "pools": 
+    [
+        {
+            "rolls": 1,
+            "entries": 
+            [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:warped_fungus_on_a_stick",
+                    "functions": 
+                    [
+                        {
+                            "function": "minecraft:set_name",
+                            "name": "§d§k§d编辑用钥匙§d§k"
+                        },
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{inviEditKey:1b}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

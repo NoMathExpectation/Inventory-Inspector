@@ -1,0 +1,1 @@
+data remove entity @s Items[{tag:{invibg:1b}}]

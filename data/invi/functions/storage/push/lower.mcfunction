@@ -1,0 +1,1 @@
+data modify block 0 1 0 Items set from entity @s data.Storage.Lower

@@ -1,0 +1,14 @@
+{
+    "criteria": 
+    {
+        "invi:clear_key":
+        {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [["invi:clear_key"]],
+    "rewards": 
+    {
+        "function": "invi:player/clear_key"
+    }
+}

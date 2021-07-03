@@ -1,0 +1,2 @@
+execute unless block ~ ~ ~ #minecraft:fluid positioned ^ ^ ^-0.01 align xyz run summon minecraft:marker ~ ~ ~ {Tags:["invi_pointer_found"]}
+execute if block ~ ~ ~ #minecraft:fluid if entity @s[distance=..10] positioned ^ ^ ^0.01 run function invi:pointer/forward

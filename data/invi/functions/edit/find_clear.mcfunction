@@ -1,0 +1,1 @@
+tag @e remove invi_chest_found

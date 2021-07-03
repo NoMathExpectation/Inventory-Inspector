@@ -1,0 +1,1 @@
+clear @s warped_fungus_on_a_stick{inviEditKey:1b}
