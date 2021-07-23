@@ -1,1 +1,1 @@
-data modify block 0 1 0 Items set from block ~ ~ ~
+data modify block 0 1 0 Items set from block ~ ~ ~ Items

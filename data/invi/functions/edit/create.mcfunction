@@ -1,9 +1,15 @@
 # 
 scoreboard players set #return inviCreate 0
 
+scoreboard players operation #findplayer pidList = #create inviCreate
+function pid:command/select/single
+
+scoreboard players operation #findstorage inviStorage = #create inviCreate
+function invi:storage/find
+
 execute if score #rotation inviCreate matches ..-1 run scoreboard players add #rotation inviCreate 360
-scoreboard players operation #rotation inviCreate %= #const45 inviCreate
-execute unless score #rotation inviCreate matches 0..7 run tellraw @s [{"text": "","interpret": true},{"storage":"invi:tellraw","nbt":"Name"},{"storage":"invi:tellraw","nbt":"Error.IllegalArgument"},{"text": "朝向","color": "red"}]
+scoreboard players operation #rotation inviCreate /= #const45 inviCreate
+execute unless score #rotation inviCreate matches 0..7 run tellraw @a[tag=pid_selected] ["",{"storage":"invi:tellraw","nbt":"Name","interpret": true},{"storage":"invi:tellraw","nbt":"Error.IllegalArgument","interpret": true},{"text": "朝向","color": "red"},{"score":{"objective": "inviCreate","name": "#rotation"},"color": "red"}]
 scoreboard players add #rotation inviCreate 4
 scoreboard players operation #rotation inviCreate %= #const8 inviCreate
 
@@ -22,7 +28,7 @@ scoreboard players operation @e[type=minecraft:marker,tag=invi_edit_init] inviEd
 data modify block ~ ~ ~ Lock set value "§d§k§d编辑用钥匙§d§k"
 tag @e[type=minecraft:marker,tag=invi_edit_init] remove invi_edit_init
 
-scoreboard players operation #findplayer pidList = #create inviCreate
-function pid:command/select/single
-advancement grant @a[tag=pid_selected] only invi:player/inventory_check
 function pid:command/deselect/all
+
+tag @e[tag=invi_storage_found] add invi_edit_update
+function invi:storage/find_clear

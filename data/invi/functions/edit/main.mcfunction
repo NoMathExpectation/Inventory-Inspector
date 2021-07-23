@@ -10,7 +10,7 @@ execute if entity @s[tag=invi_edit_chest_lower] run function invi:edit/backgroun
 execute if entity @s[tag=invi_edit_chest_lower] unless data block ~ ~ ~ Items[{Slot:26b}].tag.invibg run function invi:edit/toggle
 
 #生成背景
-function invi:edit/background/generate
+execute if entity @s[tag=invi_edit_chest_lower] run function invi:edit/background/generate
 
 # 更改检查
 function invi:edit/change

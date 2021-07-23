@@ -33,10 +33,11 @@
 
 ## 同步
 #define tag invi_sync
+#define tag invi_edit_update
 
 # JSON文本
 data merge storage invi:tellraw {Name:'[{"text": "["},{"text": "invi","color": "#5be1e1"},{"text": "]"}]'}
-data merge storage invi:tellraw {Error:{IllegalArgument:'[{"text": "非法变量","color": "red"}]'}}
+data merge storage invi:tellraw {Error:{IllegalArgument:'[{"text": "非法变量:","color": "red"}]'}}
 data merge storage invi:tellraw {Error:{NotFound:'[{"text": "未找到","color": "red"}]'}}
 data merge storage invi:tellraw {Error:{pidVersion:'[{"text":"pid版本不符，请检查是否是最新版本。","color":"red"}]'}}
 data merge storage invi:tellraw {Error:{NoPermission:'[{"text": "你没有权限这么做。","color": "red"}]'}}
@@ -66,4 +67,4 @@ scoreboard players set #const8 inviCreate 8
 scoreboard objectives add inviLastSelected dummy " "
 
 # pid版本检查
-execute unless score version pidSettings matches 11701 run tellraw @s [{"text": "","interpret": true},{"storage":"invi:tellraw","nbt":"Name"},{"storage":"invi:tellraw","nbt":"Error.pidVersion"}]
+execute unless score version pidSettings matches 11701 run tellraw @s ["",{"storage":"invi:tellraw","nbt":"Name","interpret": true},{"storage":"invi:tellraw","nbt":"Error.pidVersion","interpret": true}]

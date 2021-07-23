@@ -1,6 +1,3 @@
-# 切换
-item replace block 0 1 0 container.26 with minecraft:purple_stained_glass_pane{display: {Name: '{"text":"切换至末影箱/背包","italic": false,"color": "aqua","bold": true}'}, invibg: 1b}
-
 # 物品栏
 item replace block 0 1 0 container.9 from entity @s hotbar.0
 item replace block 0 1 0 container.10 from entity @s hotbar.1

@@ -27,12 +27,44 @@
         {
           "condition": "minecraft:inverted",
           "term": {
-              "condition": "match_tool",
+              "condition": "minecraft:match_tool",
               "predicate": 
               {
                 "nbt": "{inviNoSelf:1b}"
               }
           }
+        }
+      ]
+    },
+    {
+      "rolls":1,
+      "conditions": 
+      [
+        {
+          "condition": "minecraft:match_tool",
+          "predicate": 
+              {
+                "nbt": "{inviNoSelf:1b}"
+              }
+        }
+      ],
+      "entries": 
+      [
+        {
+          "type": "minecraft:dynamic",
+          "functions": 
+          [
+            {
+              "function": "minecraft:set_contents",
+              "entries": 
+              [
+                {
+                  "type": "minecraft:dynamic",
+                  "name": "contents"
+                }
+              ]
+            }
+          ]
         }
       ]
     }
