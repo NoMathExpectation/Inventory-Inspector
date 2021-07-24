@@ -1,4 +1,4 @@
-scoreboard players operation #findstorage inviStorage = @s pidList
+scoreboard players operation #findstorage inviStorage = @s inviEditChest
 function invi:storage/find
 
 function invi:edit/push
