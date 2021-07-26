@@ -12,5 +12,5 @@ execute unless data block ~ ~ ~ Items[{Slot:24b}].tag.invibg run data modify blo
 execute unless data block ~ ~ ~ Items[{Slot:25b}].tag.invibg run data modify block 0 1 0 Items append from block ~ ~ ~ Items[{Slot:25b}]
 execute unless data block ~ ~ ~ Items[{Slot:26b}].tag.invibg run data modify block 0 1 0 Items append from block ~ ~ ~ Items[{Slot:26b}]
 
-loot spawn ~ ~ ~ mine 0 1 0 minecraft:wooden_axe{inviNoSelf:1b}
+loot spawn ~ ~ ~ mine 0 1 0 minecraft:wooden_axe{inviContent:1b}
 function invi:transfer/clear

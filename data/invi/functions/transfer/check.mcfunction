@@ -1,1 +1,1 @@
-execute unless block 0 1 0 minecraft:barrel run setblock 0 1 0 minecraft:barrel
+execute unless block 0 1 0 minecraft:shulker_box run setblock 0 1 0 minecraft:shulker_box
