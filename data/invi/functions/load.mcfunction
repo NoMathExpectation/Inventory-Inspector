@@ -13,7 +13,7 @@
 #define score_holder #findchest 寻找编号对应箱子
 #define score_holder #selected 选择的栏位
 
-##存储
+## 存储
 #define tag invi_has_storage 有储存的玩家
 #define tag invi_storage_init 存储初始化
 #define tag invi_storage 存储
@@ -21,19 +21,20 @@
 
 #define score_holder #findstorage 寻找存储
 
-##创建
+## 创建
 #define score_holder #create 创建
 #define score_holder #return 返回值
 #define score_holder #rotation 旋转角，0为SW，1为WS，2为WN，3为NW，4为NE，5为EN，6为ES，7为SE
 #define score_holder #const45 45
 #define score_holder #const8 8
 
-##文字
+## 文字
 #define storage invi:tellraw 预制文字
 
 ## 同步
 #define tag invi_sync
 #define tag invi_edit_update
+#define tag invi_player_update
 
 # JSON文本
 data merge storage invi:tellraw {Name:'[{"text": "["},{"text": "invi","color": "#5be1e1"},{"text": "]"}]'}

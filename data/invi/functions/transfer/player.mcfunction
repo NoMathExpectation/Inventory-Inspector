@@ -1,6 +1,3 @@
-# 
-advancement revoke @s only invi:player/inventory_check
-
 # 寻找箱子
 scoreboard players operation #findchest inviEditChest = @s pidList
 function invi:edit/find
@@ -38,5 +35,7 @@ execute as @e[type=minecraft:marker,tag=invi_edit_chest_lower,tag=invi_chest_fou
 function invi:transfer/clear
 
 # 
+tag @e[tag=invi_storage_found] remove invi_sync
+
 function invi:edit/find_clear
 function invi:storage/find_clear

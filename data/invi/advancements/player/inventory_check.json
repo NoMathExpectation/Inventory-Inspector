@@ -9,6 +9,6 @@
     "requirements": [["invi:player_update"]],
     "rewards": 
     {
-        "function": "invi:transfer/player"
+        "function": "invi:player/check"
     }
 }
