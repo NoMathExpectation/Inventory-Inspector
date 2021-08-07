@@ -1,6 +1,6 @@
 # 分配存储
 execute if entity @s[tag=!invi_has_storage] run function invi:storage/init
-tag @a add invi_has_storage
+tag @s add invi_has_storage
 
 # 销毁拾取的背景
 function invi:edit/background/clear/player
