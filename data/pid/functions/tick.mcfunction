@@ -1,0 +1,1 @@
+execute if score #loadcomplete pidSettings matches 1 store result score entropy pidSettings run function pid:main

@@ -1,7 +1,7 @@
 {
     "values": 
     [
-        "invi:main",
-        "pid:main"
+        "invi:tick",
+        "pid:tick"
     ]
 }

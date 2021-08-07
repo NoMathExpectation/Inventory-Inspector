@@ -36,6 +36,10 @@
 #define tag invi_edit_update
 #define tag invi_player_update
 
+## 
+#define score_holder #loadcomplete 加载完毕
+#define score_holder entropy 函数熵
+
 # JSON文本
 data merge storage invi:tellraw {Name:'[{"text": "["},{"text": "invi","color": "#5be1e1"},{"text": "]"}]'}
 data merge storage invi:tellraw {Error:{IllegalArgument:'[{"text": "非法变量:","color": "red"}]'}}
@@ -49,6 +53,9 @@ fill -1 0 -1 1 2 1 minecraft:bedrock
 function invi:transfer/check
 
 # 计分板
+## 
+scoreboard objectives add inviMain dummy " "
+
 ## 编辑箱对应玩家表
 scoreboard objectives add inviEditChest dummy " "
 scoreboard players set #findchest inviEditChest 0
@@ -69,3 +76,6 @@ scoreboard objectives add inviLastSelected dummy " "
 
 # pid版本检查
 execute unless score version pidSettings matches 11701 run tellraw @s ["",{"storage":"invi:tellraw","nbt":"Name","interpret": true},{"storage":"invi:tellraw","nbt":"Error.pidVersion","interpret": true}]
+
+# 
+scoreboard players set #loadcomplete inviMain 1
