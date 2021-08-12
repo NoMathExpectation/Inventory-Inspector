@@ -1,2 +1,2 @@
-# Invetory Inspector
-A Minecraft datapack used for checking other players' invetories.
+# Inventory Inspector
+A Minecraft datapack used for checking other players' inventories.
