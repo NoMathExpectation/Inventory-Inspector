@@ -1,11 +1,11 @@
 function invi:transfer/check
 
+# 同步
+execute as @e[type=minecraft:marker,tag=invi_storage,tag=invi_sync] run function invi:storage/sync
+
 # 玩家物品栏有改变
 execute as @a[tag=invi_player_update] run function invi:transfer/player
 tag @a remove invi_player_update
-
-# 同步
-execute as @e[type=minecraft:marker,tag=invi_storage,tag=invi_sync] run function invi:storage/sync
 
 # 编辑箱
 execute as @e[type=minecraft:marker,tag=invi_edit_chest] at @s run function invi:edit/main
