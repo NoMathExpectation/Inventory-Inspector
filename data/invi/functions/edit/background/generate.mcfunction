@@ -1,6 +1,6 @@
 # 
-scoreboard players operation #findplayer pidList = @s inviEditChest
-function pid:command/select/single
+scoreboard players operation #findstorage inviStorage = @s inviEditChest
+function invi:storage/find
 
 # 分隔符
 item replace block ~ ~ ~ container.0 with minecraft:black_stained_glass_pane{display: {Name: '""'}, invibg: 1b}
@@ -29,10 +29,10 @@ execute if score #selected inviEditChest matches 8 run item replace block ~ ~ ~ 
 scoreboard players set #selected inviEditChest -1
 
 # 玩家信息
-execute as @a[tag=pid_selected] run loot replace block ~ ~ ~ container.25 loot invi:player_head
+data modify block ~ ~ ~ Items append from entity @e[tag=invi_storage_found,limit=1] data.Head
 
 # 切换
 item replace block ~ ~ ~ container.26 with minecraft:purple_stained_glass_pane{display: {Name: '{"text": "点我在末影箱和背包间切换", "italic": false, "color": "aqua", "bold": true}'}, invibg: 1b}
 
 # 
-function pid:command/deselect/all
+function invi:storage/find_clear

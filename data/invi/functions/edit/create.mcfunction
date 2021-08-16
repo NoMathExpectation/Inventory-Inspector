@@ -26,6 +26,14 @@ execute if score #rotation inviCreate matches 7 run function invi:edit/create/se
 # 
 scoreboard players operation @e[type=minecraft:marker,tag=invi_edit_init] inviEditChest = #create inviCreate
 data modify block ~ ~ ~ Lock set value "§d§k§d编辑用钥匙§d§k"
+
+setblock 0 1 0 oak_sign
+execute if entity @a[tag=pid_selected] run data modify block 0 1 0 Text1 set value '[{"selector": "@a[tag=pid_selected]"},{"text": "的物品"}]'
+execute if entity @a[tag=pid_selected] run data modify entity @e[tag=invi_storage_found,limit=1] data.Title set from block 0 1 0 Text1
+execute unless entity @a[tag=pid_selected] run data modify block 0 1 0 Text1 set from entity @e[tag=invi_storage_found,limit=1] data.Title
+data modify block ~ ~ ~ CustomName set from block 0 1 0 Text1
+function invi:transfer/check
+
 tag @e[type=minecraft:marker,tag=invi_edit_init] remove invi_edit_init
 
 function pid:command/deselect/all

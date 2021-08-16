@@ -18,6 +18,10 @@
                         {
                             "function": "minecraft:set_nbt",
                             "tag": "{invibg:1b}"
+                        },
+                        {
+                            "function": "minecraft:set_name",
+                            "name": ""
                         }
                     ]
                 }
