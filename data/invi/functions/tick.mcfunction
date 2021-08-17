@@ -1,1 +1,2 @@
+execute if score #loadcomplete pidSettings matches 1 run function pid:main
 execute if score #loadcomplete pidSettings matches 1 if score #loadcomplete inviMain matches 1 store result score entropy inviMain run function invi:main
